@@ -5,31 +5,31 @@ class About extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: 1,
       price: 32,
       dollar: 730,
     };
   }
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 });
-    this.setState({price: this.state.price * 2})
-    this.setState({dollar: this.state.dollar * 2})
+    this.setState({ count: this.state.count += 1 });
+    this.setState({price: this.state.price + 32 })
+    this.setState({dollar: this.state.dollar + 730})
   };
 
 
   Decrement = () => {
-    if(this.state.count == 0){
-     this.setState({count: (this.state.count = 0)})
+    if(this.state.count == 1){
+     this.setState({count: (this.state.count = 1)})
      this.setState({price: this.state.price = 32 * 2})
-     this.setState({dollar: this.state.dollar = 712 * 2})
+     this.setState({dollar: this.state.dollar = 730 * 2})
 
     }
     else{
       this.setState({count: (this.state.count - 1)})
     }
-    this.setState({ price: this.state.price - this.state.price / 2 });
-    this.setState({ dollar: this.state.dollar - this.state.dollar / 2 });
+    this.setState({ price: this.state.price -  32 });
+    this.setState({ dollar: this.state.dollar -  730});
   };
   render() {
     return (
